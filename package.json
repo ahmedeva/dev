@@ -1,0 +1,14 @@
+{
+  "name": "ahmed-website",
+  "version": "1.0.0",
+  "description": "Personal Project",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+  },
+  "author": "Ahmed Shaaban",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^8.0.0"
+  }
+}

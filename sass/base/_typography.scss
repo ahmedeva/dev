@@ -1,0 +1,92 @@
+//? HEADING DEFAULT SETTINGS
+@mixin headingStyle {
+  font-family: $secondary-font;
+  text-transform: uppercase;
+  font-weight: var(--fw-heading, 400);
+  color: $color-text-light-1;
+}
+
+.heading-1 {
+  @include headingStyle;
+  line-height: 1;
+  font-size: 3.2rem;
+  --fw-heading: 700;
+  text-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+  background-image: linear-gradient(to right, $color-primary, $color-violet);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+
+  @include respond(tb-pt) {
+    font-size: 2.8rem;
+  }
+
+  @include respond(bp-md) {
+    font-size: 2.5rem;
+  }
+  @include respond(phone) {
+    font-size: 2rem;
+  }
+}
+
+.heading {
+  &__primary--main {
+    display: block;
+    letter-spacing: 5px;
+    @include respond(tb-pt) {
+      letter-spacing: 1px;
+    }
+  }
+  &__primary--sub {
+    display: block;
+    font-size: 2.5rem;
+    @include respond(tb-pt) {
+      font-size: 2.2rem;
+    }
+
+    @include respond(phone) {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+.heading-2 {
+  @include headingStyle;
+  font-size: 3.5rem;
+  letter-spacing: 1px;
+  background-image: linear-gradient(to right, $color-primary, $color-violet);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0 1rem 2.5rem rgba($color-black, 0.3);
+
+  @include respond(tb-pt) {
+    font-size: 2.5rem;
+  }
+  @include respond(phone) {
+    font-size: 1.9rem;
+  }
+}
+
+.heading-3 {
+  @include headingStyle;
+  text-shadow: 0 1rem 2.5rem rgba($color-black, 0.3);
+}
+.heading-4 {
+  @include headingStyle;
+  font-size: 1.8rem;
+  background-image: linear-gradient(
+    to right,
+    $color-primary,
+    $color-blue-light-1
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0 1rem 2rem rgba($color-black, 0.3);
+}
+.heading-5 {
+}
+
+::placeholder {
+}

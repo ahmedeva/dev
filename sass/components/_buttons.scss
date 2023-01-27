@@ -1,0 +1,31 @@
+.btn,
+.btn:link,
+.btn:visited {
+  font-size: 1.6rem;
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  color: $color-white;
+  background-color: $color-primary;
+  border-radius: 5rem;
+  padding: 1.5rem 3rem;
+  font-weight: 400;
+  transition: all 0.2s ease-in;
+  //   For button element only
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 1rem 1.5rem rgba($color-black, 0.25);
+
+  @include respond(tb-pt) {
+    font-size: 1.4rem;
+    padding: 1rem 2rem;
+  }
+}
+
+.btn:hover,
+.btn:active {
+  transform: translateY(-0.5rem) scale(1.02);
+  background-color: darken($color-primary, 10%);
+  box-shadow: 0 1rem 2rem rgba($color-black, 0.35);
+}

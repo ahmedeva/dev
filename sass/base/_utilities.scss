@@ -1,0 +1,19 @@
+.u-text-center {
+  text-align: center !important;
+}
+
+.u-margin-bottom-hg {
+  margin-bottom: 8rem !important;
+}
+.u-margin-bottom-lg {
+  margin-bottom: 6rem !important;
+}
+.u-margin-bottom-md {
+  margin-bottom: 4rem !important;
+  @include respond(phone) {
+    margin-bottom: 2rem !important;
+  }
+}
+.u-margin-bottom-sm {
+  margin-bottom: 2rem !important;
+}

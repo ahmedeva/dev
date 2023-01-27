@@ -1,0 +1,126 @@
+.navigation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1vw 2.5vw;
+  height: 7rem;
+  width: 100%;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 0.1rem 0.2rem rgba($color-black, 0.1);
+
+  &__logo-box {
+  }
+  &__logo-link {
+  }
+  &__logo {
+    max-width: 6rem;
+    height: auto;
+    border-radius: 50%;
+    transition: filter 300ms ease-in-out;
+    @include respond(tb-pt) {
+      max-width: 4.5rem;
+    }
+  }
+  &__logo:hover {
+    filter: brightness(80%);
+  }
+  &__icons {
+    font-size: 6rem;
+    display: none;
+  }
+  &__main-nav {
+    @include respond(tb-pt) {
+      position: absolute;
+      top: 0;
+      right: 0;
+      background-color: rgba(255, 255, 255, 0.589);
+      width: 100%;
+      height: 40vh;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      backdrop-filter: blur(3px);
+      transform: translateY(-100%);
+      transition: all 250ms ease-in-out;
+    }
+  }
+  &__nav {
+    text-align: center;
+    list-style: none;
+    display: flex;
+    gap: 2.5rem;
+    @include respond(tb-pt) {
+      flex-direction: column;
+    }
+  }
+  &__link:link,
+  &__link:visited {
+    font-size: 1.6rem;
+    font-weight: 400;
+    text-decoration: none;
+    padding: 1rem 3rem;
+    border-radius: 10rem;
+    color: $color-text-dark-1;
+    transition: all 300ms ease-in-out;
+    @include respond(tb-pt) {
+      font-size: 1.8rem;
+    }
+  }
+
+  &__link:hover,
+  &__link:active {
+    background-color: $color-gray-dark-1;
+    color: $color-primary;
+  }
+}
+
+.navigation-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: none;
+  &__icon {
+    height: 4.8rem;
+    width: 4.8rem;
+
+    &--close {
+      display: none;
+    }
+  }
+
+  @include respond(tb-pt) {
+    display: block;
+  }
+}
+
+.sticky {
+  @include respond(bp-bg) {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+  }
+}
+
+.nav-open .navigation__main-nav {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateX(0);
+}
+
+.nav-open .navigation-btn__icon--menu {
+  display: none;
+}
+
+.nav-open .navigation-btn__icon--close {
+  display: block;
+}

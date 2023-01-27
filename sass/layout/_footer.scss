@@ -1,0 +1,69 @@
+.footer {
+  position: relative;
+  grid-row: 7 / 8;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: $grid-row-gap-sm;
+  grid-column: 1 / -1;
+  border-radius: 1rem;
+  padding: 5rem;
+  background-image: linear-gradient(
+    to bottom right,
+    rgba($color-primary, 1),
+    rgba($color-secondary, 1)
+  );
+  transition: $section-transition;
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    list-style: none;
+  }
+  &__icon {
+    color: $color-white;
+    font-size: 3rem;
+    transition: all 0.1s ease-out;
+  }
+
+  &__icon:hover {
+    color: darken($color-white, 20%);
+    transform: translateY(-5px) scale(1.1);
+  }
+
+  &__call:link,
+  &__call:visited {
+    text-decoration: none;
+    text-transform: uppercase;
+    background-color: $color-yellow;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    color: $color-white;
+    box-shadow: 0 1rem 2rem rgba($color-black, 0.5);
+    transition: all 150ms ease-in-out;
+  }
+  &__call:hover,
+  &__call:active {
+    transform: translateY(-5px) scale(1.01);
+    background-color: darken($color-yellow, 10%);
+  }
+  &__copyright {
+    color: $color-gray-light-1;
+    font-size: 1.3rem;
+  }
+  &__arrow {
+    position: absolute;
+    top: 0;
+    font-size: 3rem;
+    color: $color-white;
+    transition: all 150ms ease-in-out;
+  }
+
+  &__arrow:hover {
+    color: darken($color-white, 20%);
+    transform: translateY(-0.5rem) scale(1.01);
+  }
+}

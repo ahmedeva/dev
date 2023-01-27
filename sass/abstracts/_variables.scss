@@ -1,0 +1,43 @@
+// SASS VARIABLES
+
+$color-primary: #3b5bdb;
+$color-secondary: #15aabf;
+$color-tertiary: #1c7ed6;
+$color-blue-light-1: #a5d8ff;
+
+// BLACK & WHITE
+$color-white: #fff;
+$color-black: #000;
+
+// HEADINGS AND SECTIONS EXTRA COLORS
+$color-danger: #e03131;
+$color-yellow: #fcc419;
+$color-violet: #862e9c;
+
+// TEXT COLOR
+$color-text-dark-1: #333;
+$color-text-light-1: #666;
+
+// GRAY SHADES & TINTS
+$color-gray-dark-1: #e9ecef;
+$color-gray-dark-2: #343a40;
+$color-gray-dark-3: #212529;
+
+$color-gray-light-1: #f7f7f7;
+
+// DEFAULT FONTS
+$primary-font: "Roboto", sans-serif;
+$secondary-font: "Kanit", sans-serif;
+
+// CONTAINER VARIABLES
+$grid-column-gap-hg: 8rem;
+$grid-column-gap-bg: 6rem;
+$grid-column-gap-md: 4rem;
+$grid-column-gap-sm: 2rem;
+
+$grid-row-gap-hg: 8rem;
+$grid-row-gap-bg: 6rem;
+$grid-row-gap-md: 4rem;
+$grid-row-gap-sm: 2rem;
+
+$section-transition: all 0.8s cubic-bezier(0.68, -0.6, 0.32, 1.6);

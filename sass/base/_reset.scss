@@ -1,0 +1,48 @@
+// HARD RESET
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+img,
+picture {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+textarea,
+button {
+  font: inherit;
+}
+
+html {
+  // 1rem = 10px => 10/16*100 =>
+  font-size: 62.5%;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+
+  @include respond(tb-ls) {
+    font-size: 56.25%; // tablet-portrait => 9px
+  }
+
+  @include respond(tb-pt) {
+    font-size: 50%; // tablet-portrait => 8px
+  }
+
+  @include respond(bg-ds) {
+    font-size: 75%; // big-desktop => 12px
+  }
+}
+body {
+  font-size: 1.6rem;
+  font-family: $primary-font;
+  font-weight: 400;
+  line-height: 1.4;
+  color: $color-text-light-1;
+  overflow-x: hidden;
+}

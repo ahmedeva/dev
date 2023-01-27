@@ -1,0 +1,107 @@
+.testimonials {
+  padding: 10rem;
+  border-radius: 1rem;
+  grid-column: 1 / -1;
+  grid-row: 4 / 5;
+  display: grid;
+  row-gap: $grid-row-gap-bg;
+  transition: $section-transition;
+  @include respond(tb-pt) {
+    padding: 2rem;
+  }
+  &__heading {
+    justify-self: center;
+    position: relative;
+
+    &::before {
+      content: url(../img/fun-arrow.svg);
+      position: absolute;
+      right: 0.5em;
+      top: 1.3em;
+    }
+  }
+  &__card-box {
+    @include respond(tb-pt) {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+      column-gap: 5rem;
+    }
+    @include respond(phone) {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
+      column-gap: 5rem;
+    }
+  }
+  &__card {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+
+    @include respond(tb-pt) {
+      grid-template-columns: min-content;
+      justify-content: center;
+    }
+    @include respond(phone) {
+      grid-template-columns: min-content;
+      align-content: center;
+      justify-content: center;
+      row-gap: 3rem;
+    }
+  }
+
+  &__image {
+    max-width: 35rem;
+
+    &--1 {
+    }
+
+    &--2 {
+      @include respond(bp-min) {
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+      }
+      @include respond(tb-pt) {
+        grid-column: 1 / 2;
+      }
+    }
+  }
+
+  &__card-text {
+    padding: 2rem;
+    display: grid;
+    place-items: center;
+    align-content: center;
+    row-gap: $grid-row-gap-sm;
+    text-align: left;
+
+    &--1 {
+    }
+
+    &--2 {
+      @include respond(bp-min) {
+        grid-column: 1 / 2;
+      }
+    }
+  }
+  &__paragraph {
+    font-style: italic;
+    position: relative;
+    &::before {
+      content: open-quote;
+      color: $color-yellow;
+      position: absolute;
+      top: -0.6em;
+      left: -0.6em;
+      font-size: 8em;
+    }
+
+    &::after {
+      content: close-quote;
+      color: $color-yellow;
+      position: absolute;
+      right: 0;
+      bottom: -1.1em;
+      font-size: 8em;
+    }
+  }
+}

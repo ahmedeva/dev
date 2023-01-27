@@ -1,0 +1,42 @@
+@mixin centerPosAbs {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/*
+ MEDIA QUERY MANAGER
+
+phone  => <= 600px  =>
+tb-pt  => <= 900px  =>
+tb-ls  => <= 1200px =>
+bp-bg  => >= 1200px =>
+bg-ds  => >= 1800px =>
+bp-md  => <= 700px =>
+bp-min => >= 600px =>
+*/
+
+/* prettier-ignore */
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone { 
+    @media only screen and (max-width: 37.5em) {@content;}}
+
+  @if $breakpoint == tb-pt {
+    @media only screen and (max-width: 56.25em) {@content;}}
+
+  @if $breakpoint == tb-ls {
+    @media only screen and (max-width: 75em) {@content;}}
+
+  @if $breakpoint == bp-bg {
+    @media only screen and (min-width: 75em) { @content;}
+  }  
+    @if $breakpoint == bp-md {
+      @media only screen and (max-width: 43.75em) {@content;}
+    }
+  @if $breakpoint == bg-ds {
+    @media only screen and (min-width: 112.5em) {@content;}}
+
+    @if $breakpoint == bp-min {
+      @media only screen and (min-width: 37.5em) {@content;}}  
+}

@@ -1,0 +1,14 @@
+/* prettier-ignore */
+.container {
+  display: grid;
+  grid-template-columns:
+    [center-start] minmax(6rem, 1fr) repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) minmax(6rem, 1fr) [center-end];
+  grid-template-rows: calc(100vh + 7rem) 50vh auto min-content auto;
+  @include respond(tb-port) {
+    grid-template-rows: calc(75vh + 7rem) 50vh auto min-content auto;
+
+  }
+  @include respond(phone) {
+    row-gap: $grid-row-gap-bg;
+  }
+}
