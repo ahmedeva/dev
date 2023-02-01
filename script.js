@@ -5,7 +5,6 @@
 /*__________________ */
 
 const allSections = document.querySelectorAll("[data-section]");
-console.log(allSections);
 const revealSections = function (entries, observer) {
   const [entry] = entries;
   //  GUARD CLAUSE
@@ -132,3 +131,22 @@ const slider = function () {
   });
 };
 slider();
+/*______________*/
+// ACCORDION
+/*______________*/
+
+const accordion = document.querySelector(".accordion");
+const accordionItems = document.querySelectorAll(".accordion__item");
+
+accordion.addEventListener("click", function (e) {
+  const target = e.target.closest(".accordion__item");
+  if (!target) return;
+  if (target.classList.contains("open")) {
+    target.classList.toggle("open");
+  } else {
+    accordionItems.forEach((item) => {
+      item.classList.remove("open");
+      target.classList.add("open");
+    });
+  }
+});

@@ -12,6 +12,9 @@
     align-content: center;
     row-gap: 25vw;
   }
+  @include respond(phone) {
+    padding-block-start: 8rem;
+  }
 
   &__text-box {
     grid-column: 1 / 2;

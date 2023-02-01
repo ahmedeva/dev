@@ -1,15 +1,17 @@
 .features {
   grid-column: center-start / center-end;
   grid-row: 2 / 3;
-  padding: 0 5vw;
+  padding: 8rem;
   display: grid;
-  align-content: center;
   justify-content: center;
   grid-template-columns: repeat(auto-fit, minmax(30rem, max-content));
   column-gap: $grid-column-gap-bg;
   row-gap: $grid-row-gap-bg;
   transition: $section-transition;
-
+  @include respond(phone) {
+    padding: 5rem;
+    row-gap: $grid-row-gap-sm;
+  }
   &__card {
     display: grid;
     grid-template-columns: min-content 1fr;
