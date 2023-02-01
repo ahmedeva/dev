@@ -8,7 +8,7 @@
     grid-template-rows: calc(75vh + 7rem) 50vh auto min-content auto;
   }
   @include respond(phone) {
-    grid-template-rows: calc(60vh + 7rem) 65vh;
+    grid-template-rows: calc(75vh + 7rem) 65vh;
     row-gap: $grid-row-gap-bg;
   }
 }

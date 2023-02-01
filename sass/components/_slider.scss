@@ -3,6 +3,9 @@
   grid-column: center-start / center-end;
   grid-row: 6 / 7;
   transition: $section-transition;
+  @include respond(phone) {
+    padding-block-start: 5rem;
+  }
 }
 
 .slider {
